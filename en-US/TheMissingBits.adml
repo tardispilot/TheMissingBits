@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>The_Missing_Bits</displayName>
+    <description>The Missing Bits
+        All those annoying reg settings that don't have a template for use with GPOs or Intune
+        Configuration Profiles</description>
+    <resources>
+        <stringTable>
+            <string id="CAT_TheMissingBits">The Missing Bits</string>
+            <string id="CAT_TheMissingBits_HELP">All the missing stuff that GPOs and Intune
+                Configuration Profiles ~should~ include but don't.</string>
+            <string id="CAT_Outlook">Outlook</string>
+            <string id="CAT_Outlook_HELP">The Outlook settings that should be easy to find but for
+                one reason or another they're simply not exposed</string>
+            <string id="POL_HideNewOutlookToggle">Hide New Outlook Toggle</string>
+            <string id="POL_HideNewOutlookToggle_HELP">This Policy configures the
+                Value [HideNewOutlookToggle] located under the
+                [SOFTWARE\Microsoft\Office\16.0\Outlook\Options\General] Key.</string>
+        </stringTable>
+    </resources>
+</policyDefinitionResources>

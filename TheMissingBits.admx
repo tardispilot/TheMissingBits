@@ -1,0 +1,33 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <policyNamespaces>
+        <target prefix="mb" namespace="TheMissingBits" />
+        <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    </policyNamespaces>
+    <resources minRequiredRevision="1.0" fallbackCulture="en-US" />
+    <categories>
+        <category name="TheMissingBits" displayName="$(string.CAT_TheMissingBits)"
+            explainText="$(string.CAT_TheMissingBits_HELP)" />
+        <category name="Outlook"
+            displayName="$(string.CAT_Outlook)"
+            explainText="$(string.CAT_Outlook_HELP)">
+            <parentCategory ref="TheMissingBits" />
+        </category>
+    </categories>
+    <policies>
+        <policy name="HideNewOutlookToggle" class="User"
+            displayName="$(string.POL_HideNewOutlookToggle)"
+            explainText="$(string.POL_HideNewOutlookToggle_HELP)"
+            key="SOFTWARE\Microsoft\Office\16.0\Outlook\Options\General"
+            valueName="HideNewOutlookToggle">
+            <parentCategory ref="Outlook" />
+            <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <delete />
+            </disabledValue>
+        </policy>
+    </policies>
+</policyDefinitions>
